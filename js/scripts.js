@@ -1,6 +1,7 @@
-function Pizza(toppings, size) {
+function Pizza(toppings, size, addOns) {
   this.toppings = toppings
   this.size = size
+  this.addOns
 }
 
 Pizza.prototype.pizzaPrice = function () {
