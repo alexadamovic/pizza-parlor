@@ -7,37 +7,25 @@ Pizza.prototype.pizzaPrice = function () {
   let price = 0;
   
   if (this.size === "small") {
-    price = 14.00;
+    price = 14;
   } else if (this.size === "medium") {
-    price = 18.00;
+    price = 18;
   } else if (this.size === "large") {
-    price = 21.00;
+    price = 21;
   } else {
-    price = 25.00;
+    price = 25;
   }
 
-  if (this.toppings.includes("bacon")) {
+  if (this.toppings.includes("premium-meat")) {
+    price += 2.5;
+  }
+  if (this.toppings.includes("regular-meat")) {
     price += 1.75;
   }
-  if (this.toppings.includes("spinach")) {
-    price += .5;
+  if (this.toppings.includes("premium-veg")) {
+    price += .75;
   }
-  if (this.toppings.includes("garlic")) {
-    price += .5;
-  }
-  if (this.toppings.includes("pepperoni")) {
-    price += 2;
-  }
-  if (this.toppings.includes("sausage")) {
-    price += 2;
-  }
-  if (this.toppings.includes("pineapple")) {
-    price += 1;
-  }
-  if (this.toppings.includes("ham")) {
-    price += 1.5;
-  }
-  if (this.toppings.includes("mushrooms")) {
+  if (this.toppings.includes("regular-veg")) {
     price += .5;
   }
 
