@@ -48,16 +48,17 @@ $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
     let pizzaSize = $("select#pizza-size").val();
-    
+    console.log(pizzaSize)
+  
     let pizzaToppings = [];
-    $("input[name='pizza-toppings']").change(function() {
-      let checked = $(this).val();
-      if ($(this).is(':checked')) {
-        pizzaToppings.push(checked);
-      } else {
-        pizzaToppings.splice($.inArray(checked, pizzaToppings),1);
-      }
+    $("input:checkbox[name='pizza-toppings']:checked").each(function(){
+      pizzaToppings.push($(this).val());
     });
     console.log(pizzaToppings)
+
+    let userPizza = new Pizza(pizzaToppings, pizzaSize)
+    console.log(userPizza)
+
+    $("#pizza-price").html(userPizza.pizzaPrice());
   });
 });
