@@ -43,3 +43,21 @@ Pizza.prototype.pizzaPrice = function () {
 
   return price;
 };
+
+$(document).ready(function() {
+  $("form#order").submit(function(event) {
+    event.preventDefault();
+    let pizzaSize = $("select#pizza-size").val();
+    
+    let pizzaToppings = [];
+    $("input[name='pizza-toppings']").change(function() {
+      let checked = $(this).val();
+      if ($(this).is(':checked')) {
+        pizzaToppings.push(checked);
+      } else {
+        pizzaToppings.splice($.inArray(checked, pizzaToppings),1);
+      }
+    });
+    console.log(pizzaToppings)
+  });
+});
