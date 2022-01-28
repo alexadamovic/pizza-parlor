@@ -42,7 +42,7 @@ Pizza.prototype.pizzaPrice = function () {
     price += 6
   }
   
-  return price;
+  return price.toFixed(2);
 };
 
 $(document).ready(function() {
