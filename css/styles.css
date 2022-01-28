@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'garden';
+  src: url('../fonts/inthegardendemo-webfont.woff') format('woff2'),
+       url('../fonts/inthegardendemo-webfont.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  font-family: 'garden';
+  font-size: 15em;
+  letter-spacing: .03em;
+  text-align: center;
+  background-color: #fc4024;
+}
+
+.container {
+  background-color: #fc4024;
+  background-color: #565cad;
+}
+.row {
+  border: solid black 1em;
+}
