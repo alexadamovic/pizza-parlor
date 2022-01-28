@@ -14,10 +14,10 @@
     <div class="form-group">
       <label for="pizza-size">Select the size of your pizza:</label>
       <select id="pizza-size">
-        <option value="small">Small (12")</option>
-        <option value="medium">Medium (16")</option>
-        <option value="large">Large (18")</option>
-        <option value="doomsday">Doomsday (20")</option>
+        <option value="small">Small (12") - $14</option>
+        <option value="medium">Medium (16") - $18</option>
+        <option value="large">Large (18") - $21</option>
+        <option value="doomsday">Doomsday (20") - $25</option>
       </select>
     </div>
     <label for="pizza-toppings">Please select your toppings:</label>
@@ -35,15 +35,6 @@
         <div class="form-check">
           <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-meat">
           <label class="form-check-label" for="pizza-toppings">meatball</label>
-        </div>
-        <h5>Regular Meats (+$1.75 each):</h5>
-        <div class="form-check">
-          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-meat">
-          <label class="form-check-label" for="pizza-toppings">bacon</label>
-        </div>
-        <div class="form-check">
-          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-meat">
-          <label class="form-check-label" for="pizza-toppings">ham</label>
         </div>
       </div>  
       <div class="col-6">
@@ -68,6 +59,21 @@
           <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-veg">
           <label class="form-check-label" for="pizza-toppings">pineapple</label>
         </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h5>Regular Meats (+$1.75 each):</h5>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-meat">
+          <label class="form-check-label" for="pizza-toppings">bacon</label>
+        </div>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-meat">
+          <label class="form-check-label" for="pizza-toppings">ham</label>
+        </div>
+      </div>
+      <div class="col-6">
         <h5>Regular Veggies (+$0.50 each)</h5>
         <div class="form-check">
           <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-veg">
@@ -80,6 +86,23 @@
         <div class="form-check">
           <input name="pizza-toppings" type="checkbox" class="form-check-input" id="regular-veg">
           <label class="form-check-label" for="pizza-toppings">mushrooms</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <h5>Add-Ons (priced individually):</h5>
+        <div class="form-check">
+          <input name="add-ons" type="checkbox" class="form-check-input" value="side-ranch">
+          <label class="form-check-label" for="pizza-toppings">side ranch dressing ($1.50)</label>
+        </div>
+        <div class="form-check">
+          <input name="add-ons" type="checkbox" class="form-check-input" value="bucket-ranch">
+          <label class="form-check-label" for="pizza-toppings">bucket of ranch dressing ($10.00)</label>
+        </div>
+        <div class="form-check">
+          <input name="add-ons" type="checkbox" class="form-check-input" value="caeser">
+          <label class="form-check-label" for="pizza-toppings">small caeser salad ($6.00)</label>
         </div>
       </div>
     </div>

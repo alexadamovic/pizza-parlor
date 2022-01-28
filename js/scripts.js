@@ -1,7 +1,7 @@
 function Pizza(toppings, size, addOns) {
   this.toppings = toppings
   this.size = size
-  this.addOns
+  this.addOns = addOns
 }
 
 Pizza.prototype.pizzaPrice = function () {
@@ -17,19 +17,31 @@ Pizza.prototype.pizzaPrice = function () {
     price = 25;
   }
 
-  if (this.toppings.includes("premium-meat")) {
-    price += 2.5;
-  }
-  if (this.toppings.includes("regular-meat")) {
-    price += 1.75;
-  }
-  if (this.toppings.includes("premium-veg")) {
-    price += .75;
-  }
-  if (this.toppings.includes("regular-veg")) {
-    price += .5;
-  }
+  this.toppings.forEach(function(topping) {
+    if (topping === "premium-meat") {
+      price += 2.5;
+    }
+    if (topping === "regular-meat") {
+      price += 1.75;
+    }
+    if (topping === "premium-veg") {
+      price += .75;
+    }
+    if (topping === "regular-veg") {
+      price += .5;
+    }
+  });
 
+  if (this.addOns.includes("side-ranch")) {
+    price += 1.5
+  }
+  if (this.addOns.includes("bucket-ranch")) {
+    price += 10
+  }
+  if (this.addOns.includes("caeser")) {
+    price += 6
+  }
+  
   return price;
 };
 
@@ -39,11 +51,16 @@ $(document).ready(function() {
     let pizzaSize = $("select#pizza-size").val();
   
     let pizzaToppings = [];
-    $("input:checkbox[name='pizza-toppings']:checked").each(function(){
+    $("input:checkbox[name='pizza-toppings']:checked").each(function() {
       pizzaToppings.push($(this).val());
     });
 
-    let userPizza = new Pizza(pizzaToppings, pizzaSize)
+    let addOns = [];
+    $("input:checkbox[name='add-ons']:checked").each(function() {
+      addOns.push($(this).val());
+    });
+
+    let userPizza = new Pizza(pizzaToppings, pizzaSize, addOns);
 
     $("#pizza-price").html(userPizza.pizzaPrice());
   });
