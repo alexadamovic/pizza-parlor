@@ -1,5 +1,6 @@
-Describe Pizza ()
+Describe Pizza()
 
-Test: "It should return a Pizza object with two properties for toppings and size"
-Code: const bestPizza = new Pizza(toppings: ["spinach, bacon, garlic"], size: "large");
-Expected Output: Pizza { toppings: [spinach, bacon, garlic], size: "large"}
+Test: "It should construct a Pizza object with two properties for toppings and size"  
+Code: const bestPizza = new Pizza(["spinach", "bacon", "garlic"], "large");  
+  bestPizza;  
+Expected Output: Pizza { toppings: ["spinach", "bacon", "garlic"], size: "large"}
