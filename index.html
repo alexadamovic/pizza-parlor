@@ -21,37 +21,63 @@
       </select>
     </div>
     <label for="pizza-toppings">Please select your toppings:</label>
-    <div class="form-check">
-      <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-meat">
-      <label class="form-check-label" for="pizza-toppings">bacon</label>
-    </div>
-    <div class="form-check">
-      <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-veg">
-      <label class="form-check-label" for="pizza-toppings">spinach</label>
-    </div>
-    <div class="form-check">
-      <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-veg">
-      <label class="form-check-label" for="pizza-toppings">garlic</label>
-    </div>
-    <div class="form-check">
-      <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-meat">
-      <label class="form-check-label" for="pizza-toppings">pepperoni</label>
-    </div>
-    <div class="form-check">
-      <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-meat">
-      <label class="form-check-label" for="pizza-toppings">sausage</label>
-    </div>
-    <div class="form-check">
-      <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-veg">
-      <label class="form-check-label" for="pizza-toppings">pineapple</label>
-    </div>
-    <div class="form-check">
-      <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-meat">
-      <label class="form-check-label" for="pizza-toppings">ham</label>
-    </div>
-    <div class="form-check">
-      <input name="pizza-toppings" type="checkbox" class="form-check-input" id="regular-veg">
-      <label class="form-check-label" for="pizza-toppings">mushrooms</label>
+    <div class="row">
+      <div class="col-6">
+        <h5>Premium Meats (+$2.50 each):</h5>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-meat">
+          <label class="form-check-label" for="pizza-toppings">pepperoni</label>
+        </div>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-meat">
+          <label class="form-check-label" for="pizza-toppings">sausage</label>
+        </div>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-meat">
+          <label class="form-check-label" for="pizza-toppings">meatball</label>
+        </div>
+        <h5>Regular Meats (+$1.75 each):</h5>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-meat">
+          <label class="form-check-label" for="pizza-toppings">bacon</label>
+        </div>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-meat">
+          <label class="form-check-label" for="pizza-toppings">ham</label>
+        </div>
+      </div>  
+      <div class="col-6">
+        <h5>Premium Veggies (+$0.75 each)</h5>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-veg">
+          <label class="form-check-label" for="pizza-toppings">spinach</label>
+        </div>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-veg">
+          <label class="form-check-label" for="pizza-toppings">banana peppers</label>
+        </div>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-veg">
+          <label class="form-check-label" for="pizza-toppings">green pepper</label>
+        </div>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-veg">
+          <label class="form-check-label" for="pizza-toppings">pineapple</label>
+        </div>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="premium-veg">
+          <label class="form-check-label" for="pizza-toppings">pineapple</label>
+        </div>
+        <h5>Regular Veggies (+$0.50 each)</h5>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" value="regular-veg">
+          <label class="form-check-label" for="pizza-toppings">garlic</label>
+        </div>
+        <div class="form-check">
+          <input name="pizza-toppings" type="checkbox" class="form-check-input" id="regular-veg">
+          <label class="form-check-label" for="pizza-toppings">mushrooms</label>
+        </div>
+      </div>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
