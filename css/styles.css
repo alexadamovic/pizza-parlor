@@ -24,6 +24,7 @@ h1 {
 
 .container {
   background-color: #565cad;
+  padding: 1em;
 }
 .row {
   border: solid black .5em;

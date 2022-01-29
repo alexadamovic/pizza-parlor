@@ -49,19 +49,15 @@ $(document).ready(function() {
   $("form#order").submit(function(event) {
     event.preventDefault();
     let pizzaSize = $("select#pizza-size").val();
-  
     let pizzaToppings = [];
+    let addOns = [];
+    let userPizza = new Pizza(pizzaToppings, pizzaSize, addOns);
     $("input:checkbox[name='pizza-toppings']:checked").each(function() {
       pizzaToppings.push($(this).val());
     });
-
-    let addOns = [];
     $("input:checkbox[name='add-ons']:checked").each(function() {
       addOns.push($(this).val());
     });
-
-    let userPizza = new Pizza(pizzaToppings, pizzaSize, addOns);
-
     $("#pizza-price").html(userPizza.pizzaPrice());
   });
 });
