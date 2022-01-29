@@ -27,6 +27,7 @@ h1 {
 }
 .row {
   border: solid black .5em;
+  padding: 1em;
 }
 
 img {
@@ -37,12 +38,19 @@ img {
 }
 
 #total {
+  margin: auto;
   background-color: #fc4024;
   width: 30%;
+  border: solid black 1em;
+  padding: 1em;
 }
 
 form {
   background-color: seashell;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 3em;
+  border: solid black 1em;
 }
 
 h2 {
@@ -55,7 +63,7 @@ h2 {
   margin-bottom: .5em;
 }
 
-h5 {
+h5, h3 {
   font-family: 'Anton';
 }
 
@@ -66,4 +74,17 @@ h5 {
 
 .center {
   text-align: center;
+}
+
+#center-button {
+  margin: auto;
+}
+
+p {
+  font-size: 3em;
+}
+
+#pizza-size {
+  font-family: 'Anton';
+  font-size: 1.5em;
 }

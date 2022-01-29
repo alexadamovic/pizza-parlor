@@ -13,18 +13,22 @@
   <img src="img/strangelove.jpg" alt="Dr. Strangelove">
   <h2>Bad pizza is the most monstrously conceived and dangerous communist plot we have ever had to face.</h2>
   <form id="order">
-    <div class="form-group">
-      <label for="pizza-size">Select the size of your pizza:</label>
-      <select id="pizza-size">
-        <option value="small">Small (12") - $14</option>
-        <option value="medium">Medium (16") - $18</option>
-        <option value="large">Large (18") - $21</option>
-        <option value="doomsday">Doomsday (20") - $25</option>
-      </select>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="pizza-size"><span id="pizza-size">Select your size:</span></label>
+          <select id="pizza-size">
+            <option value="small">Small (12") - $14</option>
+            <option value="medium">Medium (16") - $18</option>
+            <option value="large">Large (18") - $21</option>
+            <option value="doomsday">Doomsday (20") - $25</option>
+          </select>
+        </div>
+      </div>
     </div>
     <div class="row">
       <div class="col">
-        <h5 class="center">Please select your toppings:</h5>
+        <h5 class="center">Select your toppings (choose as many as you want):</h5>
       </div>
     </div>
     <div class="row">
@@ -113,12 +117,14 @@
       </div>
     </div>
     <div class="row">
-      <button type="submit" class="btn btn-primary">Add to Order</button>
+      <div id="center-button">
+        <button type="submit" class="btn btn-lg btn-success">Add to Order</button>
+      </div>  
     </div>
   </form>
   <div id="total">
-    <h3>Total Amount:</h3>
-    <p>$<span id="pizza-price"></span></p>
+    <h3 class="center">Total Amount:</h3>
+    <p class="center">$<span id="pizza-price"></span></p>
   </div>
 </div>
   
