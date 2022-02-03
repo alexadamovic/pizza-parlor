@@ -51,10 +51,21 @@ Expected Output: Pizza { toppings: ["spinach", "bacon", "garlic"], size: "large"
 
 #### Describe Pizza.prototype.pizzaPrice()
 
-Test: "It should return a price as a number based on the toppings and size of a Pizza object"  
-Code: bestPizza.pizzaPrice();  
-Expected Output: 24
+Test: "It should return a price as a number based on the size of a Pizza object"  
+Code: const bestPizza = new Pizza([], "small")  
+  bestPizza.pizzaPrice();  
+Expected Output: 14
 
-Test: "It should return a price as a number based on the toppings, size, and addOns of a Pizza object"  
-Code: bestPizza.pizzaPrice();  
-Expected Output: 28
+Test: "It should return a price that equals the size price of the Pizza object plus the prices of any chosen toppings"  
+Code: const bestPizza = new Pizza(["regular-meat", "regular-veg"], "small")  
+  bestPizza.pizzaPrice();  
+Expected Output: 16.25
+
+Test: "It should return a higher price for the Pizza object when 'premium' toppings are chosen instead of 'regular' toppings"  
+Code: const bestPizza = new Pizza(["premium-meat", "premium-veg"], "small")  
+  bestPizza.pizzaPrice();  
+Expected Output: 17.25
+
+Test: "It should return a price that equals the size price of the Pizza object plus the prices of any chosen toppings and addOns"  
+Code: const bestPizza = new Pizza(["premium-meat", "premium-veg"], "small", ["bucket-ranch", "caeser"])  
+Expected Output: 33.25
