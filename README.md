@@ -68,4 +68,5 @@ Expected Output: 17.25
 
 Test: "It should return a price that equals the size price of the Pizza object plus the prices of any chosen toppings and addOns"  
 Code: const bestPizza = new Pizza(["premium-meat", "premium-veg"], "small", ["bucket-ranch", "caeser"])  
+  bestPizza.pizzaPrice();  
 Expected Output: 33.25
